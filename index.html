@@ -58,6 +58,12 @@
         <p><b>Pronomines personal</b> : <i>Yo, tu, il, ella, it</i> ; plurale : <i>Noi, vu, ili</i>.</p>
         
         <h2 id="exemplariFrases"><a href="#exemplariFrases">Exemplari Frases</a></h2>
+        <select name="lingues" id="lingues" onchange="adjunterFrases(this.value)">
+            <option value="en">🇬🇧 Anglesi</option>
+            <option value="es">🇪🇸 Hispan</option>
+            <option value="it">🇮🇹 Italian</option>
+            <option value="ko">🇰🇷 Korean</option>
+        </select>
         <ol id="frases"></ol>
         <script>
             var frases = {
@@ -153,10 +159,16 @@
                     'ko': '나는 사과를 먹었다.',
                 }
             }
-
-            for (const i in frases) {
-                document.getElementById('frases').innerHTML += `<li>${frases[i][userISO]} <b><i>${frases[i]['ie']}</i></b></li>`
+            
+            function adjunterFrases(langISO) {
+                var element = document.getElementById('frases');
+                element.innerHTML = '';
+                for (const i in frases) {
+                    document.getElementById('frases').innerHTML += `<li>${frases[i][langISO]} <b><i>${frases[i]['ie']}</i></b></li>`
+                }
             }
+            
+            adjunterFrases(userISO);
         </script>
         
         <h2 id="auxiliariIllustrationes"><a href="#auxiliariIllustrationes">Auxiliari Illustrationes</a></h2>
