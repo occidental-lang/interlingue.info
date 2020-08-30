@@ -57,7 +57,83 @@
         <p>Un sol <b>articul</b> definit : <mark>li</mark>. Adjectives invariabil.</p>
         <p><b>Pronomines personal</b> : <i>Yo, tu, il, ella, it</i> ; plurale : <i>Noi, vu, ili</i>.</p>
         
-        <h2 id="auxiliariIllustrationes"><a href="#">Auxiliari Illustrationes</a></h2>
+        <h2 id="exemplariFrases"><a href="#exemplariFrases">Exemplari Frases</a></h2>
+        <ol id="frases"></ol>
+        <script>
+            var frases = {
+                '0': {
+                    'en': 'The apple is red.',
+                    'it': 'La mela è rossa.',
+                    'ie': 'Li pom es rubi.'
+                },
+                '1': {
+                    'en': 'It is John’s apple.',
+                    'it': 'È la mela di John.',
+                    'ie': 'It es li pom de John.'
+                },
+                '2': {
+                    'en': 'I give John the apple.',
+                    'it': 'Io do la mela a John.',
+                    'ie': 'Yo da li pom a John.'
+                },
+                '3': {
+                    'en': 'We give him the apple.',
+                    'it': 'Noi gli diamo la mela.',
+                    'ie': 'Noi da le li pom.'
+                },
+                '4': {
+                    'en': 'He gives it to John.',
+                    'it': 'Lui la/lo* dà a John.',
+                    'ie': 'Il da it a John.'
+                },
+                '5': {
+                    'en': 'She gives it to him.',
+                    'it': 'Lei la/lo* dà a John.',
+                    'ie': 'Ella da le it.'
+                },
+                '6': {
+                    'en': 'Is the apple red?',
+                    'it': 'La mela è rossa?',
+                    'ie': 'Esque li pom es rubi?'
+                },
+                '7': {
+                    'en': 'The apples are red.',
+                    'it': 'Le mele sono rosse.',
+                    'ie': 'Li poms es rubi.'
+                },
+                '8': {
+                    'en': 'I must give it to him.',
+                    'it': 'La/lo* devo dare a lui.',
+                    'ie': 'Yo deve dar le it.'
+                },
+                '9': {
+                    'en': 'I want to give it to her.',
+                    'it': 'La/lo* voglio dare a lei.',
+                    'ie': 'Yo vole dar la it.'
+                },
+                '10': {
+                    'en': 'I’m going to know tomorrow.',
+                    'it': 'Lo saprò domani.',
+                    'ie': 'Yo va saver deman.'
+                },
+                '11': {
+                    'en': 'I can’t eat the apple.',
+                    'it': 'Non posso/riesco a mangiare la mela.',
+                    'ie': 'Yo ne posse li pom.'
+                },
+                '12': {
+                    'en': 'I have eaten the apple.',
+                    'it': 'Ho mangiato la mela.',
+                    'ie': 'Yo ha manjat li pom.'
+                }
+            }
+
+            for (var i=0; i<frases.length; i++) {
+                document.getElementById('frases').innerHTML += `<li>${frases[i][userISO]}<i>${frases[i]['ie']}</i></li>`
+            }
+        </script>
+        
+        <h2 id="auxiliariIllustrationes"><a href="#auxiliariIllustrationes">Auxiliari Illustrationes</a></h2>
         <h3 id="quant"><a href="#quant">Quant?</a></h3>
 <pre style="overflow-x:scroll;">    
   0%  <---------------------------------------------->  100%
