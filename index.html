@@ -161,6 +161,8 @@
             }
             
             function adjunterFrases(langISO) {
+                var langs = document.getElementById('lingues')
+                for (var l of langs.options) { if (l.value == langISO) {l.selected = true} }
                 var element = document.getElementById('frases');
                 element.innerHTML = '';
                 for (const i in frases) {
