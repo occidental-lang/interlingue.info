@@ -128,8 +128,8 @@
                 }
             }
 
-            for (var i=0; i<frases.length; i++) {
-                document.getElementById('frases').innerHTML += `<li>${frases[i.toString()][userISO]}<i>${frases[i.toString()]['ie']}</i></li>`
+            for (const i in frases) {
+                document.getElementById('frases').innerHTML += `<li>${frases[i][userISO]}<i>${frases[i]['ie']}</i></li>`
             }
         </script>
         
